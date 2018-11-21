@@ -1,0 +1,19 @@
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html>
+  <head>
+ <title><%= yield(:title) %> | Bloggster</title>  </head>
+  <body>
+    <h1>Home Page</h1>
+    <p>
+      This is my home page. Welcome.
+    </p>
+    <%= image_tag("/assets/my_image.jpg", height: 200, width: 300) %>
+    <% x =  5 %>
+    <% for i in 1..x do %>
+    	<%= image_tag("/assets/my_image.jpg", height: 200, width: 300) %>
+    <% end %>
+
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  </body>
+</html>
